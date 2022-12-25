@@ -1,5 +1,6 @@
 <!DOCTYPE html>
     <body>
+        <h1>혹시 화면을 가로로 돌려주실수 있으신가요?</h1>
         <div class="d">
             <span>loding..</loding></span>
         </div>
@@ -12,6 +13,17 @@
             width: 50vh;
             height: 35vh;
             margin: 0 auto;
+        }
+        h1 {
+            @media (orientation: portrait) {
+	        /* Portrait 모드일 때 적용할 CSS */
+                
+            }   
+
+             @media (orientation: landscape) {
+	        /* Landscape 모드일 때 적용할 CSS */
+                 display:none;
+            }
         }
         span {
             margin-top: 30vh;
