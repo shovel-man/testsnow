@@ -1,8 +1,7 @@
 <!DOCTYPE html>
     <body>
         <div class="d">
-            <h1>혹시 화면을 가로로 돌려주실수 있으신가요?</h1>
-	    <span>loding..</loding></span>
+            <span>loding..</loding></span>
         </div>
         </body>
     <style>
@@ -13,18 +12,6 @@
             width: 50vh;
             height: 35vh;
             margin: 0 auto;
-        }
-        h1 {
-            @media (orientation: portrait) {
-	        /* Portrait 모드일 때 적용할 CSS */
-		color: red;
-                
-            }   
-
-             @media (orientation: landscape) {
-	        /* Landscape 모드일 때 적용할 CSS */
-                 display:none;
-            }
         }
         span {
             margin-top: 30vh;
@@ -85,7 +72,7 @@
             const duration = Math.random() * 20 + MIN_DURATION;
 
             snowflake.classList.add("snowflake");
-            snowflake.style.left = `${Math.random() * window.screen.width}px`;
+            snowflake.style.left = `${Math.random() *  window.innerWidth || document.body.clientWidth}px`;
             snowflake.style.animationDelay = `${delay}s`
             snowflake.style.opacity = initalOpacity;
             snowflake.style.animation = `fall ${duration}s linear`
